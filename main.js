@@ -11,7 +11,7 @@ const client = new Client({
 });
 
 // list of banned words (all lowercase)
-const bannedWords = ["badword1", "badword2", "no-no"];
+const bannedWords = ["bitch", "dick", "fuck", "fuh", "dih", "bih", "pussy", "dick", "penis", "ass", "ahh", "tits", "boob", boobies", "balls", "sybau"];
 
 // function to normalize messages (leet substitutions)
 function normalizeMessage(msg) {
@@ -36,7 +36,7 @@ client.on("messageCreate", (message) => {
     const normalized = normalizeMessage(message.content);
 
     // check banned words with fuzzy matching
-    if (bannedWords.some(word => stringSimilarity.compareTwoStrings(normalized, word) > 0.8)) {
+    if (bannedWords.some(word => stringSimilarity.compareTwoStrings(normalized, word) > 0.65)) {
         message.delete()
             .then(() => {
                 message.channel.send(`🚫 Yo <@${message.author.id}>, chill with the language!`);
