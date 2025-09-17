@@ -2,9 +2,9 @@
   "name": "discord-censor-bot",
   "version": "1.0.0",
   "description": "A Discord bot that censors banned words with fuzzy matching",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node main.js"
   },
   "dependencies": {
     "discord.js": "^14.16.3",
